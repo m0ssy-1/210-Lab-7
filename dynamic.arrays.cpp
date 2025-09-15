@@ -33,6 +33,7 @@ delete[] arr;
 return 0;
 }
 
+// funct to swap string
 string* reverseArray(string* arr, int size) {
     for (int i = 0; i < size /2; i++) {
         string temp = *(arr + i);
@@ -40,4 +41,12 @@ string* reverseArray(string* arr, int size) {
         *(arr + (size - 1 - i)) = temp;
     }
     return arr;
+}
+
+//funct to display elements
+void displayArray(string* arr, int size) {
+    for(int i = 0; i < size; i++) {
+        cout << *arr + i) << "sometihng";
+    }
+    cout << endl;
 }
