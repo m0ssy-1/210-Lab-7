@@ -2,51 +2,53 @@
 #include <string>
 using namespace std;
 
-const int SIZE = 5;  // const array size
+const int SIZE = 5; // const array size
 
-//funct protos
-string* reverseArray(string* arr, int size);
-void displayArray(string* arr, int size);
+// funct protos
+string *reverseArray(string *arr, int size);
+void displayArray(string *arr, int size);
 
-int main(){
+int main() {
 
-    string* arr = new string[SIZE];
+  string *arr = new string[SIZE];
 
-//array names
-    *(arr + 0)= "Janet";
-    *(arr + 1) = "Jeffe";
-    *(arr + 2)= "Jin";
-    *(arr + 3) = "Joe";
-    *(arr + 4) = "Junio";
+  // array names
+  *(arr + 0) = "Janet";
+  *(arr + 1) = "Jeffe";
+  *(arr + 2) = "Jin";
+  *(arr + 3) = "Joe";
+  *(arr + 4) = "Junio";
 
-//display original array
-cout << "something";
-displayArray(arr, SIZE);
+  // display original array
+  cout << "Original array: ";
+  displayArray(arr, SIZE);
 
-reverseArray(arr, SIZE);
+  // swap array
+  reverseArray(arr, SIZE);
 
-cout << "something";
-displayArray(arr, SIZE);
+  // display swapped array
+  cout << "Reversed array: ";
+  displayArray(arr, SIZE);
 
-delete[] arr;
+  delete[] arr;
 
-return 0;
+  return 0;
 }
 
 // funct to swap string
-string* reverseArray(string* arr, int size) {
-    for (int i = 0; i < size /2; i++) {
-        string temp = *(arr + i);
-        *(arr + i) = *(arr + (size - 1 - i));
-        *(arr + (size - 1 - i)) = temp;
-    }
-    return arr;
+string *reverseArray(string *arr, int size) {
+  for (int i = 0; i < size / 2; i++) {
+    string temp = *(arr + i);
+    *(arr + i) = *(arr + (size - 1 - i));
+    *(arr + (size - 1 - i)) = temp;
+  }
+  return arr;
 }
 
-//funct to display elements
-void displayArray(string* arr, int size) {
-    for(int i = 0; i < size; i++) {
-        cout << *arr + i) << "sometihng";
-    }
-    cout << endl;
+// funct to display elements
+void displayArray(string *arr, int size) {
+  for (int i = 0; i < size; i++) {
+    cout << *(arr + i) << " ";
+  }
+  cout << endl;
 }
